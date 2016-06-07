@@ -5,13 +5,13 @@ local Game = require "game"
 local mainGame = Game()
 
 function love.load(arg)
-	mainGame:load()
+	mainGame:load(arg)
 end
 
 function love.draw()
 	mainGame:update(love.timer.getDelta())
 end
 
-function love.resize()
-
+function love.resize(w, h)
+	if mainGame.resize then mainGame:resize(w, h) end
 end
