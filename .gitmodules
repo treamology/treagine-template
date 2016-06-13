@@ -1,0 +1,3 @@
+[submodule "treagine"]
+	path = treagine
+	url = https://treamology@github.com/treamology/treagine.git
