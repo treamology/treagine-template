@@ -6,6 +6,11 @@ local Game = require "game"
 local mainGame = Game()
 
 function love.load(arg)
+	-- live console output
+	io.stdout:setvbuf("no")
+	-- attach debugger
+	if arg[#arg] == "-debug" then require("mobdebug").start() end
+
 	mainGame:load(arg)
 end
 
